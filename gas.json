@@ -1,0 +1,76 @@
+{
+    "stations": [
+        {
+            "nom": "Total Gif/Yvette",
+            "essence": "E10",
+            "prix": "1.569 \u20ac",
+            "maj": "06/12"
+        },
+        {
+            "nom": "Market Chiot",
+            "essence": "SP95",
+            "prix": "1.667 \u20ac",
+            "maj": "27/11"
+        },
+        {
+            "nom": "Market Chiot",
+            "essence": "E10",
+            "prix": "1.565 \u20ac",
+            "maj": "03/12"
+        },
+        {
+            "nom": "Station La Chevroli\u00e8re",
+            "essence": "SP95",
+            "prix": "1.679 \u20ac",
+            "maj": "19/11"
+        },
+        {
+            "nom": "Carrefour Magny",
+            "essence": "SP95",
+            "prix": "1.628 \u20ac",
+            "maj": "02/12"
+        },
+        {
+            "nom": "Carrefour Magny",
+            "essence": "E10",
+            "prix": "1.598 \u20ac",
+            "maj": "02/12"
+        },
+        {
+            "nom": "Intermarch\u00e9 Magny",
+            "essence": "SP95",
+            "prix": "1.629 \u20ac",
+            "maj": "01/12"
+        },
+        {
+            "nom": "Intermarch\u00e9 Magny",
+            "essence": "E10",
+            "prix": "1.599 \u20ac",
+            "maj": "01/12"
+        },
+        {
+            "nom": "Super U Pt St Martin",
+            "essence": "SP95",
+            "prix": "1.599 \u20ac",
+            "maj": "04/12"
+        },
+        {
+            "nom": "Super U Pt St Martin",
+            "essence": "E10",
+            "prix": "1.559 \u20ac",
+            "maj": "04/12"
+        },
+        {
+            "nom": "Total P\u00e9riph Nantes",
+            "essence": "E10",
+            "prix": "1.529 \u20ac",
+            "maj": "06/12"
+        },
+        {
+            "nom": "Leclerc Chiot",
+            "essence": "SP95",
+            "prix": "1.667 \u20ac",
+            "maj": "06/12"
+        }
+    ]
+}
