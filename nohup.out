@@ -1,0 +1,4 @@
+Unable to find image 'gasapp:lastest' locally
+docker: Error response from daemon: pull access denied for gasapp, repository does not exist or may require 'docker login': denied: requested access to the resource is denied.
+See 'docker run --help'.
+bb86b32f65f07c904d3882efac56fae0423ff7d066790e06a0c629f6277e20d4
