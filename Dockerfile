@@ -15,4 +15,3 @@ COPY . ./
 
 CMD ["gunicorn", "-w", "1", "-k", "gthread", "--threads", "3", "--timeout", "180", "-b", "0.0.0.0:8080", "--max-requests", "200", "--max-requests-jitter", "10", "--worker-tmp-dir", "/dev/shm", "api:APP"]
 EXPOSE 8080
-
