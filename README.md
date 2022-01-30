@@ -11,3 +11,8 @@ Examples adapted from :
  * https://trstringer.com/logging-flask-gunicorn-the-manageable-way/
  * https://trstringer.com/python-flask-debug-docker-compose/
  * https://pythonspeed.com/articles/activate-virtualenv-dockerfile/
+
+Need improvements : 
+ [ ] Implement a Redis Job queue for parsing task
+ [ ] Implement a map view with openable link to add a station to database
+ [ ] Need a dash layout to filter stations by Gas, with a Selector on location
