@@ -5,7 +5,7 @@ from dash import html
 from dash.dependencies import Input, Output
 
 from app import app
-from layouts.layouts_home import layout_homepage
+from layouts.layout_home import layout_homepage
 
 app.layout = html.Div([
     dcc.Location(

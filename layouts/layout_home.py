@@ -34,6 +34,21 @@ layout_homepage = html.Div(
                 )
             ]
         ),
-        navbar
+        navbar,
+        html.Div(
+            [
+                dcc.Interval(
+                    id="interval_updatedays",
+                    interval=2000
+                    ),
+                dcc.Markdown(" ## Vous êtes :"),
+                dcc.Dropdown(
+                    id="configuration_id",
+                    value=None,
+                    multi=False,
+                    clearable=False
+                                ),
+            ]
+        )
     ]
 )

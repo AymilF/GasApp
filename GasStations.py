@@ -11,7 +11,7 @@ import requests
 import json
 import zipfile
 from requests.exceptions import HTTPError
-import xml.etree.ElementTree as ET 
+import xml.etree.ElementTree as ET
 import os
 import threading, time, signal
 from datetime import timedelta
@@ -40,15 +40,15 @@ def loadXML():
         zip_ref.extractall("./")
         zip_ref.close()
     os.remove("ZIP.zip")
-    
+
 def parseXML(xmlfile):
-    # create element tree object 
-    tree = ET.parse(xmlfile)   
-    
-    # get root element 
-    root = tree.getroot() 
-    
-     # create empty list for pdv 
+    # create element tree object
+    tree = ET.parse(xmlfile)
+
+    # get root element
+    root = tree.getroot()
+
+     # create empty list for pdv
     trackids = []
     add = ['226 BLD DE LA LOIRE', '78 Grand\'Rue', 'Rue des Vignes', 'AVENUE GEORGES POMPIDOU','RUE AUX FLEURS', 'PLACE DE BEAUPLAN', '155 AVENUE DU GENERAL LECLERC']
     res = dict()
@@ -92,7 +92,7 @@ def parseXML(xmlfile):
         json.dump(res, json_file)
 
 def main():
-    loadXML()        
+    loadXML()
     parseXML('PrixCarburants_instantane.xml')
 
 
@@ -100,7 +100,7 @@ class ProgramKilled(Exception):
     pass
 
 def signal_handler(signum, ffoorame):
-    raise ProgramKilled          
+    raise ProgramKilled
 
 class Job(threading.Thread):
     def __init__(self, interval, execute, *args, **kwargs):
@@ -109,16 +109,16 @@ class Job(threading.Thread):
         self.stopped = threading.Event()
         self.interval = interval
         self.execute = execute
-        self.args = args 
+        self.args = args
         self.kwargs = kwargs
-        
+
     def stop(self):
                 self.stopped.set()
                 self.join()
     def run(self):
         while not self.stopped.wait(self.interval.total_seconds()):
             self.execute(*self.args, **self.kwargs)
-            
+
 if __name__ == "__main__":
     signal.signal(signal.SIGTERM, signal_handler)
     signal.signal(signal.SIGINT, signal_handler)
@@ -136,27 +136,27 @@ if __name__ == "__main__":
 
 
 
-        
-loadXML()        
+
+loadXML()
 parseXML('PrixCarburants_instantane.xml')
-    
-    
-    
-    
-    
-    # with open("PrixCarburants_instantane.xml") as xml_file: 
-    #     data_dict = xmltodict.parse(xml_file.read()) 
-    #     xml_file.close() 
+
+
+
+
+
+    # with open("PrixCarburants_instantane.xml") as xml_file:
+    #     data_dict = xmltodict.parse(xml_file.read())
+    #     xml_file.close()
     #os.remove("./PrixCarburants_instantane.xml")
-    # generate the object using json.dumps()  
-    # corresponding to json data 
-      
-    # json_data = json.dumps(data_dict) 
-      
-    ## Write the json data to output  
-    ## json file 
-    # with open("data.json", "w") as json_file: 
-    #     json_file.write(json_data) 
+    # generate the object using json.dumps()
+    # corresponding to json data
+
+    # json_data = json.dumps(data_dict)
+
+    ## Write the json data to output
+    ## json file
+    # with open("data.json", "w") as json_file:
+    #     json_file.write(json_data)
     #     json_file.close()
 
 # with open('data.json', 'r') as f:
@@ -164,4 +164,3 @@ parseXML('PrixCarburants_instantane.xml')
 
 # for key, val in dict_data.items():
 #     print(key, "=>", val)
-    
